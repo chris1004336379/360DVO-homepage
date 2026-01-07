@@ -336,11 +336,24 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-five-fifths">
         <h2 class="title is-3">Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            <img src="static/images/framework14.jpg"/>
+            Framework overview of 360DVO. Our method takes
+sequential 360-degree RGB frames as input and extracts
+matching features and context features using our proposed
+DAS-Feat module on each of them. In DAS-Feat,
+the key component SphereResNet extracts distortion-resistant
+features, allowing patches to be cropped without deformation.
+After patchifying the matching features around
+their gradient maxima, we compute the correlation of patch
+features and context features and estimate optical flow through
+a recurrent network. In the ODBA module, the pose and
+depth of frame are jointly optimized by minimizing the
+distance between predicted patch (from optical flow) and
+reprojected patch on the adjacent frame.
+            <img width="80%" src="static/images/framework14.jpg"/>
           </p>
         </div>
       </div>
