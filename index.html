@@ -6,7 +6,8 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="360DVO: Deep Visual Odometry for Monocular 360-Degree Camera - Xiaopeng Guo, Yinzhe Xu, Huajian Huang and Sai-Kit Yeung">
+  <meta name="title" content="360DVO: Deep Visual Odometry for Monocular 360-Degree Camera - Xiaopeng Guo, 
+  Yinzhe Xu, Huajian Huang and Sai-Kit Yeung">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -88,7 +89,8 @@
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" 
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
   
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
@@ -207,7 +209,8 @@
             <!-- TODO: Replace with actual paper title -->
             <h5>360VO: Visual Odometry Using A Single 360 Camera</h5>
             <!-- TODO: Replace with brief description -->
-            <p>Propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera for robust localization and mapping.</p>
+            <p>Propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera 
+              for robust localization and mapping.</p>
             <!-- TODO: Replace with venue and year -->
             <span class="work-venue">IEEE International Conference on Robotics and Automation (ICRA), 2022.</span>
           </div>
@@ -239,7 +242,8 @@
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Xiaopeng Guo</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=w7-kROsAAAAJ&hl=zh-TW&inst=1381320739207392350" target="_blank">Yinzhe Xu</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=w7-kROsAAAAJ&hl=zh-TW&inst=1381320739207392350" 
+                  target="_blank">Yinzhe Xu</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="https://huajianup.github.io" target="_blank">Huajian Huang</a><sup>†</sup>,</span>
                     <span class="author-block">
@@ -249,14 +253,16 @@
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">The Hong Kong University of Science and Technology<br>IEEE Robotics and Automation Letters (RA-L), 2026.</span>
+                    <span class="author-block">The Hong Kong University of Science and Technology<br>
+                      IEEE Robotics and Automation Letters (RA-L), 2026.</span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution, <sup>†</sup>Indicates Corresponding Author</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution, 
+                      <sup>†</sup>Indicates Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
+                      <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
                         <a href="https://arxiv.org/abs/2601.02309v1" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -324,7 +330,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we present 360DVO, the first deep learning-based OVO framework. Our approach introduces a distortion-aware spherical feature extractor (DAS-Feat) that adaptively learns distortion-resistant features from 360-degree images. These sparse feature patches are then used to establish constraints for effective pose estimation within a novel omnidirectional differentiable bundle adjustment (ODBA) module. To facilitate evaluation in realistic settings, we also contribute a new real-world OVO benchmark. Extensive experiments on this benchmark and public synthetic datasets (TartanAir V2 and 360VO) demonstrate that 360DVO surpasses state-of-the-art baselines (including 360VO and OpenVSLAM), improving robustness by 50% and accuracy by 37.5%.
+            In this paper, we present 360DVO, the first deep learning-based OVO framework. 
+            Our approach introduces a distortion-aware spherical feature extractor (DAS-Feat) 
+            that adaptively learns distortion-resistant features from 360-degree images. 
+            These sparse feature patches are then used to establish constraints for effective 
+            pose estimation within a novel omnidirectional differentiable bundle adjustment (ODBA) module. 
+            To facilitate evaluation in realistic settings, we also contribute a new real-world OVO benchmark. 
+            Extensive experiments on this benchmark and public synthetic datasets (TartanAir V2 and 360VO) 
+            demonstrate that 360DVO surpasses state-of-the-art baselines (including 360VO and OpenVSLAM), 
+            improving robustness by 50% and accuracy by 37.5%.
           </p>
         </div>
       </div>
@@ -340,18 +354,14 @@
         <h2 class="title is-3">Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            Our method takes sequential 360-degree RGB frames as input and extracts
-matching features and context features using our proposed
-DAS-Feat module on each of them. In DAS-Feat,
-the key component SphereResNet extracts distortion-resistant
-features, allowing patches to be cropped without deformation.
-After patchifying the matching features around
-their gradient maxima, we compute the correlation of patch
-features and context features and estimate optical flow through
-a recurrent network. In the ODBA module, the pose and
-depth of current frame are jointly optimized by minimizing the
-distance between predicted patch (from optical flow) and
-reprojected patch on the adjacent frame.
+            Our method takes sequential 360-degree RGB frames as input and extracts matching features 
+            and context features using our proposed DAS-Feat module on each of them. In DAS-Feat,
+            the key component SphereResNet extracts distortion-resistant features, allowing patches 
+            to be cropped without deformation. After patchifying the matching features around
+            their gradient maxima, we compute the correlation of patch features and context features 
+            and estimate optical flow through a recurrent network. In the ODBA module, the pose and
+            depth of current frame are jointly optimized by minimizing the distance between predicted 
+            patch (from optical flow) and reprojected patch on the adjacent frame.
           </p>
           <p>
             <img width="100%" src="static/images/teaser.jpeg"/>
@@ -410,7 +420,39 @@ reprojected patch on the adjacent frame.
       <div class="column is-five-fifths">
         <h2 class="title is-3">Video Presentation</h2>
         <div class="content has-text-justified">
-          <iframe width="960" height="540" src="https://www.youtube.com/embed/6eFJcpD2fJU?si=-Dapiu-dFOO5N6bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p>
+            Our method takes sequential 360-degree RGB frames as input and extracts
+matching features and context features using our proposed
+DAS-Feat module on each of them. In DAS-Feat,
+the key component SphereResNet extracts distortion-resistant
+features, allowing patches to be cropped without deformation.
+After patchifying the matching features around
+their gradient maxima, we compute the correlation of patch
+features and context features and estimate optical flow through
+a recurrent network. In the ODBA module, the pose and
+depth of current frame are jointly optimized by minimizing the
+distance between predicted patch (from optical flow) and
+reprojected patch on the adjacent frame.
+          </p>
+          <p>
+            <img width="100%" src="static/images/teaser.jpeg"/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="content has-text-justified">
+          <iframe width="960" height="540" src="https://www.youtube.com/embed/6eFJcpD2fJU?si=-Dapiu-dFOO5N6bs" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+          encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -499,8 +541,11 @@ End paper poster -->
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" 
+            target="_blank">Academic Project Page Template</a> which was adopted from the 
+            <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  
+            href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
