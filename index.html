@@ -209,8 +209,6 @@
             <!-- TODO: Replace with actual paper title -->
             <h5>360VO: Visual Odometry Using A Single 360 Camera</h5>
             <!-- TODO: Replace with brief description -->
-            <p>Propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera 
-              for robust localization and mapping.</p>
             <!-- TODO: Replace with venue and year -->
             <span class="work-venue">IEEE International Conference on Robotics and Automation (ICRA), 2022.</span>
           </div>
@@ -220,7 +218,7 @@
         <a href="https://360vots.hkustvgd.com" class="work-item" target="_blank">
           <div class="work-info">
             <h5>360VOTS: Visual Object Tracking and Segmentation in Omnidirectional Videos</h5>
-            <p></p>
+            
             <span class="work-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), Nov. 2025.</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
@@ -418,24 +416,13 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3">Video Presentation</h2>
+        <h2 class="title is-3">Experiments</h2>
         <div class="content has-text-justified">
           <p>
-            Our method takes sequential 360-degree RGB frames as input and extracts
-matching features and context features using our proposed
-DAS-Feat module on each of them. In DAS-Feat,
-the key component SphereResNet extracts distortion-resistant
-features, allowing patches to be cropped without deformation.
-After patchifying the matching features around
-their gradient maxima, we compute the correlation of patch
-features and context features and estimate optical flow through
-a recurrent network. In the ODBA module, the pose and
-depth of current frame are jointly optimized by minimizing the
-distance between predicted patch (from optical flow) and
-reprojected patch on the adjacent frame.
+            
           </p>
           <p>
-            <img width="100%" src="static/images/teaser.jpeg"/>
+            <img width="100%" src="static/images/exp.png"/>
           </p>
         </div>
       </div>
@@ -491,26 +478,6 @@ reprojected patch on the adjacent frame.
   </div>
 </section>
 <!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster 
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-End paper poster -->
-
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
