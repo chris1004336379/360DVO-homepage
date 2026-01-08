@@ -419,19 +419,27 @@
         <h2 class="title is-3">Experiments</h2>
         <div class="content has-text-justified">
           <p>
-            Table I: Quantitative comparison of trajectory accuracy (ATE/RPE(t)/RPE(r)) and tracking success rate (%) on the 360DVO
-            dataset (Easy and Hard). “-” indicates failure. Best result per sequence is in red, second-best result in blue. 360DVO (fast)
-            denotes the modification of using lower resolution images as input while maintaining sparser sampling patches. All results are
-            shown with 2-decimal precision for clarity.
+            <img width="100%" src="static/images/exp.png"/>
           </p>
           <p>
-            <img width="100%" src="static/images/exp.png"/>
+            Table I: Quantitative comparison of trajectory accuracy (ATE/RPE(t)/RPE(r)) and tracking success rate (%) on the 360DVO
+            dataset (Easy and Hard). “-” indicates failure. Best result per sequence is in <span style="color: rgb(240,128,128)">red</span>, second-best result in 
+            <span style="color: rgb(135,206,250)">blue</span>. 360DVO (fast) denotes the modification of using lower resolution images as input while maintaining 
+            sparser sampling patches. All results are shown with 2-decimal precision for clarity.
+          </p>
+          <p>
+            <img width="100%" src="static/images/box.png"/>
           </p>
           <p>
             Figure I: Boxplot results of OVO methods on the 360DVO dataset. Our 360DVO runs stably with lowest variations.
           </p>
           <p>
-            <img width="100%" src="static/images/box.png"/>
+            <img width="100%" src="static/images/traj.jpg"/>
+          </p>
+          <p>
+            Figure II: Trajectories Comparison on the 360DVO dataset in 3D space, with position variations along the X, Y, and Z axes plotted
+            over all frames. The ground truth is shown in <span style="font-weight: bold">black dashed lines</span>, 360DVO results in <span style="color: rgb(240,128,128)">red solid lines</span>, and OpenVSLAM results
+            in <span style="color: rgb(135,206,250)">blue solid lines</span>.
           </p>
         </div>
       </div>
